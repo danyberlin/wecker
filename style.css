@@ -1,0 +1,181 @@
+@font-face {
+  font-family: "Arcade";
+  src: url("fonts/ARCADECLASSIC.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Famiridis";
+  src: url("fonts/Famirids.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Minecraft";
+  src: url("fonts/Minecrafter.ttf") format("truetype");
+}
+
+body {
+  /* border: 3px red dotted; */
+  background-color: black;
+  height: 99%;
+  width: 99%;
+  margin: 0px;
+  user-select: none;
+  overflow: hidden;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* height: 35%; */
+  /* border: 3px solid green; */
+}
+
+.bottom,
+.weather,
+.navibar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid green; */
+}
+
+.colon,
+.date,
+.digits,
+.weather,
+.navi,
+.parent,
+.radio {
+  font-family: Famiridis;
+  color: #588658;
+}
+
+.digits,
+.colon {
+  /* border: 2px green dotted; */
+  height: 43vh;
+  width: 15vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 130px;
+
+  /* transform: translate(0, 15px); */
+}
+
+.date,
+.weather {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 35px;
+}
+
+.wecker {
+  /* justify-content: right; */
+  /* align-items: center; */
+  /* display: inline; */
+  font-size: 15px;
+  /* width: 40px; */
+  /* border: 3px green; */
+}
+
+.navi {
+  /* justify-content: center;
+  align-items: center; */
+  font-size: 40px;
+  /* border: 3px lightblue dotted; */
+}
+
+#sButton,
+#sButton2 {
+  background-color: black;
+  display: inline-flex;
+  text-align: center;
+  border: none;
+  font-size: 50px;
+  font-family: Famiridis;
+  color: #588658;
+}
+
+#radiotoggle, #radioch1, #radioch2, #radioch3 {
+  background-color: black;
+  display: inline-flex;
+  text-align: center;
+  border: none;
+  font-size: 35px;
+  font-family: Famiridis;
+  color: #588658;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.button {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.title {
+  grid-area: 1 / 2 / 2 / 5;
+  text-align: center;
+}
+
+.hour {
+  grid-area: 2 / 2 / 3 / 3;
+  text-align: center;
+}
+
+.min {
+  grid-area: 2 / 4 / 3 / 5;
+  text-align: center;
+}
+
+.button2 {
+  grid-area: 1 / 5 / 3 / 6;
+  text-align: center;
+}
+
+.setAlarm {
+  color: #58E658;
+  text-align: center;
+}
+
+#mlist,
+#hlist {
+  background-color: black;
+  color: #588658;
+}
+.radio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "radioToggle hspace channel1 channel2 channel3" ". . . . ." ". . . . .";
+}
+
+.radioToggle {
+  grid-area: radioToggle;
+  text-align: center;
+}
+.hspace {
+  grid-area: hspace;
+  text-align: center;
+}
+.channel1 {
+  grid-area: channel1;
+  text-align: center;
+}
+.channel2 {
+  grid-area: channel2;
+  text-align: center;
+}
+.channel3 {
+  grid-area: channel3;
+  text-align: center;
+}
